@@ -21,7 +21,7 @@ public class InteractivePercolationVisualizer {
         int n = 10;          
         if (args.length == 1) n = Integer.parseInt(args[0]);
 
-        // repeatedly open site specified my mouse click     and draw resulting system
+        // repeatedly open site specified my mouse click and draw resulting system
         StdOut.println(n);
 
         StdDraw.enableDoubleBuffering();

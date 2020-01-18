@@ -11,8 +11,7 @@ public class PercolationStats {
     private static final double CONFIDENCE_95 = 1.96;
     private double[] percolationThresholds;
     private final int trials;
-    private double sqrtTrials;
-    private double mean = 0, stddev = 0, confidenceLo = 0, confidenceHi = 0;
+    private double mean = 0, stddev = 0, confidenceLo = 0, confidenceHi = 0, sqrtTrials;
 
     // perform independent trials on an n-by-n grid
     public PercolationStats(int n, int trials) {
@@ -38,7 +37,6 @@ public class PercolationStats {
         if (args.length != 2) throw new IllegalArgumentException();
         PercolationStats ps = new PercolationStats(Integer.parseInt(args[0]),
                                                    Integer.parseInt(args[1]));
-        // for(int i=0; i<ps.percolationThresholds.length; i++) System.out.print(ps.percolationThresholds[i]+" ");
         System.out.println("mean = " + ps.mean());
         System.out.println("stddev = " + ps.stddev());
         System.out.println(
