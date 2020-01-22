@@ -10,7 +10,6 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
-    // unit testing code
     private Item[] arr;
     private int numElem;
 
@@ -19,13 +18,20 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         numElem = 0;
     }
 
+    // unit testing code
     public static void main(String[] args) {
         RandomizedQueue<String> test = new RandomizedQueue<>();
         test.enqueue("Hello1");
-        test.enqueue("World2");
-        System.out.println(test.dequeue());
-        System.out.println(test.dequeue());
-        System.out.println(test.dequeue());
+        test.enqueue("Hello2");
+        test.enqueue("Hello3");
+        test.enqueue("Hello4");
+        for (String str : test) {
+            System.out.println(str);
+        }
+        System.out.println("-");
+        for (String str : test) {
+            System.out.println(str);
+        }
     }
 
     public void enqueue(Item item) {
@@ -34,21 +40,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             resize(1);
         }
         arr[numElem++] = item;
-    }
-
-    public Item dequeue() {
-        if (numElem == 0) throw new NoSuchElementException();
-        int randomPos = StdRandom.uniform(numElem);
-        // System.out.print("Random: " + randomPos + " Length: "+arr.length);
-        Item temp = arr[randomPos];
-        // System.out.print(" Temp: " + temp + " NumElem: "+ numElem);
-        arr[randomPos] = arr[numElem-- - 1];
-        arr[numElem] = null;
-        // System.out.print("-"+numElem+" arrRP: " + arr[randomPos]+"   ");
-        if (arr.length / 3 == numElem) {
-            resize(0);
-        }
-        return temp;
     }
 
     private void resize(int op) {
@@ -73,6 +64,21 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
     }
 
+    public Item dequeue() {
+        if (numElem == 0) throw new NoSuchElementException();
+        int randomPos = StdRandom.uniform(numElem);
+        // System.out.print("Random: " + randomPos + " Length: "+arr.length);
+        Item temp = arr[randomPos];
+        // System.out.print(" Temp: " + temp + " NumElem: "+ numElem);
+        arr[randomPos] = arr[numElem-- - 1];
+        arr[numElem] = null;
+        // System.out.print("-"+numElem+" arrRP: " + arr[randomPos]+"   ");
+        if (arr.length / 3 == numElem && numElem != 0) {
+            resize(0);
+        }
+        return temp;
+    }
+
     public boolean isEmpty() {
         return numElem == 0;
     }
@@ -87,27 +93,23 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return arr[randomPos];
     }
 
-    // public Item pop(Item item) {
-    //     if (arr.length / 3 == numElem) {
-    //         resize(0);
-    //     }
-    //     return arr[numElem--];
-    // }
-
     public Iterator<Item> iterator() {
         return new RandomizedQueueIterator();
     }
 
     private class RandomizedQueueIterator implements Iterator<Item> {
-        private int currPos = 0;
+        private int iterNumElem = numElem;
+        private int currPos = -1;
 
         public boolean hasNext() {
-            return !(currPos >= arr.length);
+            return iterNumElem != 0;
         }
 
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
-            return arr[currPos++];
+            if (currPos == -1) currPos = StdRandom.uniform(numElem);
+            iterNumElem--;
+            return arr[currPos++ % numElem];
         }
     }
 }
