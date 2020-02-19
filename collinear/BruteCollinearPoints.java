@@ -13,17 +13,37 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BruteCollinearPoints {
-    private List<LineSegment> segments;
+    private final List<LineSegment> segments;
 
     public BruteCollinearPoints(Point[] points) {
-        Arrays.sort(points);
+        // arg checks
+        if (points == null) throw new IllegalArgumentException();
+        for (Point pt : points) {
+            if (pt == null) throw new IllegalArgumentException();
+        }
+        for (int i = 0; i < points.length; i++) {
+            Point pt = points[i];
+            for (int j = 0; j < points.length; j++) {
+                if (pt.compareTo(points[j]) == 0 && j != i) throw new IllegalArgumentException();
+            }
+        }
+
+
+        Point[] sortedPoints = Arrays.copyOfRange(points, 0, points.length);
+        Arrays.sort(sortedPoints);
         segments = new ArrayList<>();
-        for (int i=0; i<points.length; i++) {
-            for (int j=i+1; j<points.length; j++) {
-                for (int k=j+1; k<points.length; k++) {
-                    for (int l=k+1; l<points.length; l++) {
-                        if(points[i].slopeTo(points[j]) == points[i].slopeTo(points[k]) && points[i].slopeTo(points[l]) == points[i].slopeTo(points[k])) {
-                            segments.add(new LineSegment(points[i], points[l]));
+        for (int i = 0; i < sortedPoints.length; i++) {
+            for (int j = i + 1; j < sortedPoints.length; j++) {
+                for (int k = j + 1; k < sortedPoints.length; k++) {
+                    for (int m = k + 1; m < sortedPoints.length; m++) {
+                        if (Double
+                                .compare(sortedPoints[i].slopeTo(sortedPoints[j]),
+                                         sortedPoints[i].slopeTo(sortedPoints[k]))
+                                == 0
+                                && Double.compare(sortedPoints[i].slopeTo(sortedPoints[m]),
+                                                  sortedPoints[i].slopeTo(sortedPoints[k])) == 0) {
+                            if (sortedPoints[i] != sortedPoints[m])
+                                segments.add(new LineSegment(sortedPoints[i], sortedPoints[m]));
                         }
                     }
                 }
@@ -34,7 +54,7 @@ public class BruteCollinearPoints {
     public static void main(String[] args) {
 
         // read the n points from a file
-        In in = new In("rs1423.txt");
+        In in = new In("aaainput1.txt");
         int n = in.readInt();
         Point[] points = new Point[n];
         for (int i = 0; i < n; i++) {
@@ -42,13 +62,14 @@ public class BruteCollinearPoints {
             int y = in.readInt();
             points[i] = new Point(x, y);
         }
+        points[2] = null;
 
         // draw the points
         StdDraw.enableDoubleBuffering();
         StdDraw.setXscale(0, 32768);
         StdDraw.setYscale(0, 32768);
         for (Point p : points) {
-            p.draw();
+            // p.draw();
         }
         StdDraw.show();
 
@@ -61,11 +82,13 @@ public class BruteCollinearPoints {
         StdDraw.show();
     }
 
-    LineSegment[] segments() {
-        return segments.toArray(new LineSegment[segments.size()]);
+    public LineSegment[] segments() {
+        LineSegment[] segArr = segments.toArray(new LineSegment[segments.size()]);
+
+        return segArr;
     }
 
-    int numberOfSegments() {
+    public int numberOfSegments() {
         return segments.size();
     }
 }

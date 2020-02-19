@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="BCP initial">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BruteCollinearPoints.class" beforeDir="false" afterPath="$PROJECT_DIR$/BruteCollinearPoints.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BruteCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/BruteCollinearPoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FastCollinearPoints.class" beforeDir="false" afterPath="$PROJECT_DIR$/FastCollinearPoints.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FastCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/FastCollinearPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Point$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Point$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Point$byslopeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/Point$byslopeOrder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../percolation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../percolation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/Point.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,13 @@
   <component name="ErrorTreeViewConfiguration">
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Imp">
+      <favorite_root url="BruteCollinearPoints" module="Algorithms, Part I" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
+      <favorite_root url="Point" module="Algorithms, Part I" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
+      <favorite_root url="FastCollinearPoints" module="Algorithms, Part I" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
+    </favorites_list>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,7 +122,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -132,55 +139,59 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="620" y="305" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1582020107660" />
-    <state x="524" y="122" key="#xdebugger.evaluate" timestamp="1582042037422">
+    <state x="682" y="308" width="488" height="516" key="#xdebugger.evaluate" timestamp="1582110406097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="524" y="122" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1582042037422" />
+    <state x="682" y="308" width="488" height="516" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1582110406097" />
     <state x="323" y="22" key="CommitChangelistDialog2" timestamp="1582095283872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="323" y="22" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582095283872" />
     <state x="303" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1581678061064" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1582095472796">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1582112553146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582095472796" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582112553146" />
     <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581677993105" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1582095472796">
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1582112553146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582095472796" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582112553146" />
     <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1581677993104" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1582095472796">
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1582112553146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582095472796" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582112553146" />
     <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1581677993103" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1582095472796">
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1582112553146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582095472796" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582112553146" />
     <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1581677993104" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1582095472803">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1582112304760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582095472803" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582112304760" />
     <state width="1398" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581676928176" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1582095472802">
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1582112304760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582095472802" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582112304760" />
     <state width="1398" height="285" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1581676928175" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1582095472802">
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1582112304760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582095472802" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582112304760" />
     <state width="1398" height="285" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1581676928175" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1582095472802">
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1582112304760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582095472802" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582112304760" />
     <state width="1398" height="285" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1581676928176" />
+    <state x="349" y="159" key="IDE.errors.dialog" timestamp="1582107500911">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="159" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1582107500911" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1581666182199">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -193,21 +204,27 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="376" y="296" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1581666119692" />
-    <state x="509" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581678063608">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="509" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1581678063608" />
-    <state x="339" y="152" width="857" height="553" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582092860729">
+    <state x="543" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582098238023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="339" y="152" width="857" height="553" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1582092860729" />
+    <state x="543" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1582098238023" />
+    <state x="509" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1581678063608" />
+    <state x="339" y="152" width="857" height="553" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582099593042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="339" y="152" width="857" height="553" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1582099593042" />
+    <state x="411" y="2" width="713" height="819" key="find.popup" timestamp="1582104802341">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="411" y="2" width="713" height="819" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1582104802341" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1581675740995">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1440.877@0.23.1440.877" timestamp="1581675740995" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1581677307235">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="411" y="179" width="715" height="636" key="search.everywhere.popup" timestamp="1582098382123">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="411" y="179" width="715" height="636" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582098382123" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1581677307235" />
   </component>
   <component name="XDebuggerManager">
@@ -215,16 +232,34 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/FastCollinearPoints.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="8" />
+          <line>96</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/FastCollinearPoints.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/FastCollinearPoints.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/FastCollinearPoints.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/FastCollinearPoints.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <default-breakpoints>
-        <breakpoint enabled="true" type="java-exception" />
-      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/collinear$BruteCollinearPoints.ic" NAME="BruteCollinearPoints Coverage Results" MODIFIED="1582104947905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/collinear$FastCollinearPoints.ic" NAME="FastCollinearPoints Coverage Results" MODIFIED="1582037164669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
