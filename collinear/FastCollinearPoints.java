@@ -39,7 +39,7 @@ public class FastCollinearPoints {
             Arrays.sort(slopeSortedPts, (o1, o2) -> currPoint.slopeOrder().compare(o1, o2));
             List<Point> eqSlopePts = new ArrayList<Point>();
             // if (i > indexEvaluatedTill) indexEvaluatedTill = 0;
-            for (int j = i+1; j < slopeSortedPts.length - 1; j++) {
+            for (int j = 0; j < slopeSortedPts.length - 1; j++) {
                 if (Double.compare(currPoint.slopeTo(slopeSortedPts[j + 1]),
                                    currPoint.slopeTo(slopeSortedPts[j])) == 0) {
                     if (eqSlopePts.isEmpty()) eqSlopePts.add(slopeSortedPts[j]);
@@ -66,7 +66,7 @@ public class FastCollinearPoints {
 
     public static void main(String[] args) {
         // read the n points from a file
-        In in = new In("input50.txt");
+        In in = new In("rs1423.txt");
         int n = in.readInt();
         Point[] points = new Point[n];
         for (int i = 0; i < n; i++) {
