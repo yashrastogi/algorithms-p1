@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -38,6 +38,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\EL775CX\Downloads\algorithms\8puzzles\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1ZWf6XQTaJ2xR93tQQjlHw9f3YL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,10 +55,56 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+  </component>
+  <component name="RunManager" selected="Application.Solver">
+    <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Board" />
+      <module name="Algorithms, Part I" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PuzzleChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PuzzleChecker" />
+      <module name="Algorithms, Part I" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle2x2-unsolvable1.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solver" />
+      <module name="Algorithms, Part I" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StdAudio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.princeton.cs.algs4.StdAudio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.princeton.cs.algs4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solver" />
+        <item itemvalue="Application.Board" />
+        <item itemvalue="Application.StdAudio" />
+        <item itemvalue="Application.PuzzleChecker" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,6 +116,14 @@
       <option name="presentableId" value="Default" />
       <updated>1584959595639</updated>
     </task>
+    <task id="LOCAL-00001" summary="8puzzles: upload">
+      <created>1587379556631</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587379556631</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -74,18 +135,126 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="8puzzles: upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="8puzzles: upload" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="495" y="94" key="#PuzzleChecker" timestamp="1585205819918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="495" y="94" key="#PuzzleChecker/0.0.1536.824@0.0.1536.824" timestamp="1585205819918" />
+    <state x="495" y="94" key="#Solver" timestamp="1585205808040">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="495" y="94" key="#Solver/0.0.1536.824@0.0.1536.824" timestamp="1585205808040" />
+    <state x="495" y="82" key="#StdAudio" timestamp="1585208518772">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="495" y="82" key="#StdAudio/0.0.1536.824@0.0.1536.824" timestamp="1585208518772" />
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584959899415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584959899415" />
-    <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584959623826">
+    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser" timestamp="1585133277490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1584959623826" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584959965312">
+    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585133277490" />
+    <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584961701696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584959965312" />
+    <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1584961701696" />
+    <state x="487" y="129" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1585055013171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="487" y="129" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1585055013171" />
+    <state x="284" y="0" width="968" height="816" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585133516210">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="284" y="0" width="968" height="816" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1585133516210" />
+    <state x="524" y="122" key="#xdebugger.evaluate" timestamp="1584962591648">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="122" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1584962591648" />
+    <state x="404" y="11" key="CommitChangelistDialog2" timestamp="1587379544135">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="404" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587379544135" />
+    <state width="932" height="466" key="DebuggerActiveHint" timestamp="1585059279012">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="932" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1585059279012" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1585048802966">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585048802966" />
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1587379586403">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587379586403" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1587379586402">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587379586402" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1587379586402">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587379586402" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1587379586402">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587379586402" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1587358383872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587358383872" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1587358383872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587358383872" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1587358383872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587358383872" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1587358383872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587358383872" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1587379574010">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587379574010" />
+    <state x="361" y="94" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584961204193">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="94" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1584961204193" />
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585211503660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1585211503660" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1585132231806">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585132231806" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585069038734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585069038734" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Board.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Solver.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
