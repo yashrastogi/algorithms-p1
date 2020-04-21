@@ -4,8 +4,6 @@
  *  Description:
  **************************************************************************** */
 
-import edu.princeton.cs.algs4.In;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -13,6 +11,8 @@ import java.util.Objects;
 public class Board {
     private final int[][] tiles;
     private int manhattan = -1;
+    // private int isSolvable = -1;
+    private Board goalBoard = null;
 
     // create a board from an n-by-n array of tiles,
     // where tiles[row][col] = tile at (row, col)
@@ -30,28 +30,57 @@ public class Board {
         return tempArr;
     }
 
+    // public boolean isSolvable() {
+    //     if (isSolvable == 0) return false;
+    //     if (isSolvable == 1) return true;
+    //
+    //     int inversions = 0;
+    //     for(int i=0; i<tiles.length; i++) {
+    //         for(int j=0; j<tiles.length; j++) {
+    //             if(tiles[i][j] > goalBoard().tiles[i][j] && tiles[i][j] != 0) {
+    //                 inversions += tiles[i][j] - goalBoard().tiles[i][j];
+    //             }
+    //         }
+    //     }
+    //
+    //     System.out.println("Inversions: "+inversions);
+    //     return true;
+    // }
+
     public static void main(String[] args) {
-        In in = new In("puzzle04.txt");
-        int n = in.readInt();
-        int[][] tiles = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                tiles[i][j] = in.readInt();
-            }
-        }
+        // In in = new In("puzzle04.txt");
+        // int n = in.readInt();
+        // int[][] tiles = new int[n][n];
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j < n; j++) {
+        //         tiles[i][j] = in.readInt();
+        //     }
+        // }
+        int[][] tiles = { { 5, 2, 8 }, { 4, 1, 7 }, { 0, 3, 6 } };
         Board board = new Board(tiles);
         System.out.println("" + board);
         System.out.println("Hamming: " + board.hamming());
         System.out.println("Manhattan: " + board.manhattan());
         System.out.println("Twin: " + board.twin());
-        System.out.print("Neighbors: ");
+        System.out.println("Neighbors: ");
         // for (int i = 0; i < 100; i++) System.out.println(board.manhattan());
+        // for (Board b : board.neighbors()) {
+        //     System.out.println(b);
+        // }
+        // board.isSolvable();
+        // 4 1 3
+        // 0 2 5
+        // 7 8 6
+
+        // 0 1 3
+        // 4 2 5
+        // 7 8 6
     }
 
     // number of tiles out of place
     public int hamming() {
         int incorrCount = 0;
-        Board goalBoard = goalBoard();
+        if (goalBoard == null) goalBoard = goalBoard();
         for (int i = 0; i < tiles.length; ++i)
             for (int j = 0; j < tiles.length; ++j)
                 if (tiles[i][j] != goalBoard.tiles[i][j])
@@ -66,6 +95,7 @@ public class Board {
         manhattan = 0;
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles.length; j++) {
+                // if(tiles[i][j] == 0) break;
                 manhattan += findUnitManhattan(new Point(i, j));
             }
         }
@@ -105,11 +135,11 @@ public class Board {
 
     private int findUnitManhattan(Point currPt) {
         if (tiles[currPt.getX()][currPt.getY()] == 0) return 0;
-        Board goal = goalBoard();
+        if (goalBoard == null) goalBoard = goalBoard();
         Point goalPt = new Point(0, 0);
         for (int i = 0; i < tiles.length; i++)
             for (int j = 0; j < tiles.length; j++)
-                if (goal.tiles[i][j] == tiles[currPt.getX()][currPt.getY()]) {
+                if (goalBoard.tiles[i][j] == tiles[currPt.getX()][currPt.getY()]) {
                     goalPt = new Point(i, j);
                     break;
                 }
@@ -171,7 +201,8 @@ public class Board {
 
     // is this board the goal board?
     public boolean isGoal() {
-        return this.equals(goalBoard());
+        if (goalBoard == null) goalBoard = goalBoard();
+        return this.equals(goalBoard);
     }
 
     // does this board equal y?
