@@ -227,7 +227,9 @@ public class Board {
         buf.append("" + tiles.length + "\n");
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles.length; j++) {
-                buf.append(tiles[i][j] + "\t");
+                // if(tiles[i][j] == 0) buf.append("*" + "\t");
+                // else
+                    buf.append(tiles[i][j] + "\t");
             }
             buf.append("\n");
         }

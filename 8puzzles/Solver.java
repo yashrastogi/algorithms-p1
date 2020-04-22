@@ -6,78 +6,50 @@
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.MinPQ;
-
-import java.util.ArrayList;
-import java.util.List;
+import edu.princeton.cs.algs4.Stack;
 
 public class Solver {
-    private int moves;
-    private List<Board> solutionPath;
-    private boolean isSolvable = true;
+    private final int moves;
+    private final boolean isSolvable;
+    private final SearchNode goalSN;
 
     // find a solution to the initial board (using the A* algorithm)
     public Solver(Board initial) {
-        MinPQ<SearchNode> searchNodesBoard = new MinPQ<>((o1, o2) -> Integer.compare(o1.currentBoard.manhattan() + o1.numberOfMoves,
-                                                                            o2.currentBoard.manhattan() + o2.numberOfMoves));
-        MinPQ<SearchNode> searchNodesTwin = new MinPQ<>((o1, o2) -> Integer.compare(o1.currentBoard.manhattan() + o1.numberOfMoves,
-                                                                                     o2.currentBoard.manhattan() + o2.numberOfMoves));
-        SearchNode snBoard = new SearchNode(initial, 0, null);
-        SearchNode snTwin = new SearchNode(initial.twin(), 0, null);
-        solutionPath = new ArrayList<>();
-        solutionPath.add(initial);
-        int countBoard = 1;
-        int countTwin = 1;
-        while (!snBoard.currentBoard.isGoal() && !snTwin.currentBoard.isGoal()) {
-            for (Board b : snBoard.currentBoard.neighbors()) {
+        if (initial == null) throw new IllegalArgumentException();
+
+        MinPQ<SearchNode> searchNodes = new MinPQ<>(
+                (o1, o2) -> Integer.compare(o1.manhattanPriorityVal, o2.manhattanPriorityVal));
+        searchNodes.insert(new SearchNode(initial, 0, null, true));
+        searchNodes.insert(new SearchNode(initial.twin(), 0, null, false));
+        SearchNode sn = searchNodes.delMin();
+
+        while (sn == null || !sn.currentBoard.isGoal()) {
+            for (Board b : sn.currentBoard.neighbors()) {
                 // critical optimization
-                if (snBoard.previousSN != null) {
-                    if (!b.equals(snBoard.previousSN.currentBoard))
-                        searchNodesBoard.insert(new SearchNode(b, countBoard, snBoard));
+                if (sn.previousSN != null) {
+                    if (!b.equals(sn.previousSN.currentBoard))
+                        searchNodes
+                                .insert(new SearchNode(b, sn.numberOfMoves + 1, sn, sn.fromBoard));
                 }
                 else
-                    searchNodesBoard.insert(new SearchNode(b, countBoard, snBoard));
+                    searchNodes.insert(new SearchNode(b, sn.numberOfMoves + 1, sn, sn.fromBoard));
             }
-            for (Board b : snTwin.currentBoard.neighbors()) {
-                // critical optimization
-                if (snTwin.previousSN != null) {
-                    if (!b.equals(snTwin.previousSN.currentBoard))
-                        searchNodesTwin.insert(new SearchNode(b, countTwin, snTwin));
-                }
-                else
-                    searchNodesTwin.insert(new SearchNode(b, countTwin, snTwin));
-            }
-            countBoard++;
-            countTwin++;
-            snBoard = searchNodesBoard.delMin();
-            snTwin = searchNodesTwin.delMin();
-            solutionPath.add(snBoard.currentBoard);
+            sn = searchNodes.delMin();
         }
-        if(snTwin.currentBoard.isGoal()) isSolvable = false;
-        moves = snBoard.numberOfMoves;
+
+        if (!sn.fromBoard) {
+            isSolvable = false;
+            moves = -1;
+        }
+        else {
+            isSolvable = true;
+            moves = sn.numberOfMoves;
+        }
+        goalSN = sn;
     }
 
     private static <T> void print(T s) {
         System.out.println("" + s);
-    }
-
-    // test client (see below)
-    public static void main(String[] args) {
-        In in = new In("puzzle04.txt");
-        int n = in.readInt();
-        int[][] tiles = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                tiles[i][j] = in.readInt();
-            }
-        }
-        // int[][] tiles = {{0,1,3},{4,2,5},{7,8,6}};
-        Solver sv = new Solver(new Board(tiles));
-        print("isSolvable: " + sv.isSolvable());
-        // print("Moves: " + sv.moves());
-        // print("Path:");
-        // for (Board b : sv.solution()) {
-        //     print(b);
-        // }
     }
 
     // min number of moves to solve initial board
@@ -92,6 +64,14 @@ public class Solver {
 
     // sequence of boards in a shortest solution
     public Iterable<Board> solution() {
+        Stack<Board> solutionPath = new Stack<>();
+        SearchNode currSN = goalSN;
+        if (!isSolvable) return null;
+        while (currSN.previousSN != null) {
+            solutionPath.push(currSN.currentBoard);
+            currSN = currSN.previousSN;
+        }
+        solutionPath.push(currSN.currentBoard);
         return solutionPath;
     }
 
@@ -99,23 +79,43 @@ public class Solver {
         private final Board currentBoard;
         private final int numberOfMoves;
         private final SearchNode previousSN;
+        private final int manhattanPriorityVal;
+        private final boolean fromBoard;
 
-        public SearchNode(Board current, int numberOfMoves, SearchNode previousSN) {
+        public SearchNode(Board current, int numberOfMoves, SearchNode previousSN,
+                          boolean fromBoard) {
             this.currentBoard = current;
             this.numberOfMoves = numberOfMoves;
             this.previousSN = previousSN;
+            this.fromBoard = fromBoard;
+            manhattanPriorityVal = current.manhattan() + numberOfMoves;
         }
 
-        public Board getCurrentBoard() {
-            return currentBoard;
-        }
-
-        public int getNumberOfMoves() {
-            return numberOfMoves;
-        }
-
-        public SearchNode getPrevSearchN() {
-            return previousSN;
+        public String toString() {
+            return "{mp: " + manhattanPriorityVal + "; moves: " + numberOfMoves + "; fromBoard: "
+                    + fromBoard + "}";
         }
     }
+
+    // test client (see below)
+    public static void main(String[] args) {
+        In in = new In("puzzle36.txt");
+        int n = in.readInt();
+        int[][] tiles = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                tiles[i][j] = in.readInt();
+            }
+        }
+        // tiles = new int[][] { { 1,2,3 }, { 8,6,7 }, { 4,0,5 } };
+        Solver sv = new Solver(new Board(tiles));
+        print("isSolvable: " + sv.isSolvable());
+        print("moves: " + sv.moves());
+        // print("Moves: " + sv.moves());
+        // print("Path:");
+        for (Board b : sv.solution()) {
+            print(b);
+        }
+    }
+
 }
