@@ -1,5 +1,3 @@
-public class KdTree {
-    KdTree() {
-        
-    }
+class KdTree {
+
 }
