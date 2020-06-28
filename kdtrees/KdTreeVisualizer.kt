@@ -17,9 +17,9 @@ object KdTreeVisualizer {
                 val p = Point2D(x, y)
                 if (rect.contains(p)) {
                     StdOut.printf("%8.6f %8.6f\n", x, y)
-//                    kdtree.insert(p)
+                    kdtree.insert(p)
                     StdDraw.clear()
-//                    kdtree.draw()
+                    kdtree.draw()
                     StdDraw.show()
                 }
             }

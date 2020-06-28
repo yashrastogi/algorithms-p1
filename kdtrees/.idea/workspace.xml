@@ -20,45 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/includes/File Header.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/internal/AnnotationType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/internal/Class.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/internal/Enum.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/internal/Interface.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/internal/module-info.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fileTemplates/internal/package-info.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KdTree.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KdTreeGenerator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KdTreeVisualizer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NearestNeighborVisualizer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PointSET.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RangeSearchVisualizer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-reflect-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-reflect.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-test-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-test.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/includes/File Header.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/internal/AnnotationType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/internal/Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/internal/Enum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/internal/Interface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/internal/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileTemplates/internal/package-info.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/Algorithms, Part I.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Algorithms__Part_I.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Algorithms__Part_I.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms, Part I.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms, Part I.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KdTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KdTreeGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KdTreeVisualizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NearestNeighborVisualizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PointSET.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RangeSearchVisualizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KdTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KdTree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KdTreeVisualizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KdTreeVisualizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NearestNeighborVisualizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/NearestNeighborVisualizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PointSET.kt" beforeDir="false" afterPath="$PROJECT_DIR$/PointSET.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,15 +66,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
-  <component name="RunManager" selected="Kotlin.PointSET">
+  <component name="RunManager" selected="Kotlin.NearestNeighborVisualizer">
     <configuration name="KdTreeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="KdTreeGenerator" />
       <module name="Algorithms, Part I" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NearestNeighborVisualizer" type="JetRunConfigurationType" nameIsGenerated="true">
+      <module name="Algorithms, Part I" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="input10K.txt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="NearestNeighborVisualizer" />
+      <option name="WORKING_DIRECTORY" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,6 +105,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.KdTreeGenerator" />
+      <item itemvalue="Kotlin.NearestNeighborVisualizer" />
+      <item itemvalue="Kotlin.PointSET" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.PointSET" />
@@ -162,26 +149,46 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="90" key="#Inspections" timestamp="1593277042474">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1593277042474" />
     <state x="479" y="16" key="#PointSET" timestamp="1593251559350">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="479" y="16" key="#PointSET/0.0.1536.824@0.0.1536.824" timestamp="1593251559350" />
-    <state x="498" y="0" key="#Project_Structure" timestamp="1593251737916">
+    <state x="498" y="0" key="#Project_Structure" timestamp="1593277596829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1593251737916" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593252170636">
+    <state x="498" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1593277596829" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593281330926">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1593252170636" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1593281330926" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593251522904">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593251522904" />
-    <state x="548" y="171" key="FileChooserDialogImpl" timestamp="1592969938138">
+    <state x="548" y="171" key="FileChooserDialogImpl" timestamp="1593277554829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592969938138" />
+    <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593277554829" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1593288114777">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593288114777" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1593288114777">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593288114777" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1593288114777">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593288114777" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1593288114777">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593288114777" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1593250339251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

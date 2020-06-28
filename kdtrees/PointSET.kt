@@ -11,11 +11,8 @@ class PointSET {
         get() = points.size == 0
 
     // number of points in the set
-    //    val size
-    //        get() = points.size
-    fun size(): Int {
-        return points.size
-    }
+    val size: Int
+        get() = points.size
 
     fun insert(p: Point2D?) { // add the point to the set (if it is not already in the set)
         requireNotNull(p)
@@ -79,7 +76,7 @@ class PointSET {
                 insert(Point2D(7.0, 8.0))
             }
             set.draw()
-            println("Size: " + set.size())
+            println("Size: " + set.size)
             println("Nearest pt. to (3, 3): " + set.nearest(Point2D(3.0, 3.0)))
         }
     }
