@@ -77,9 +77,29 @@ public class KdTree {
 
     public Point2D nearest(Point2D that) {
         if (that == null) throw new IllegalArgumentException();
-        double minDist = -1;
-        Point2D minPoint = null;
+        nearestRecurse(root, that, -1.0);
         return null;
+    }
+
+    private Point2D nearestRecurse(Node node, Point2D pt, Double minDist) {
+            
+        if (node.leftOrBottom != null && node.rightOrTop != null) {
+            if (rect.distanceSquaredTo(node.leftOrBottom.pt) < rect
+                    .distanceSquaredTo(node.rightOrTop.pt)) {
+                rangeRecurse(node.leftOrBottom, points, rect);
+            }
+            else if (rect.distanceSquaredTo(node.leftOrBottom.pt) > rect
+                    .distanceSquaredTo(node.rightOrTop.pt)) {
+                rangeRecurse(node.rightOrTop, points, rect);
+            }
+            else {
+                rangeRecurse(node.leftOrBottom, points, rect);
+                rangeRecurse(node.rightOrTop, points, rect);
+            }
+        }
+        else if (node.leftOrBottom != null) rangeRecurse(node.leftOrBottom, points, rect);
+        else if (node.rightOrTop != null) rangeRecurse(node.rightOrTop, points, rect);
+        else return;
     }
 
     public void draw() {
@@ -89,16 +109,16 @@ public class KdTree {
     private void drawRecurse(Node node, boolean palatt) {
         if (node == null) return;
         StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.setPenRadius(0.03);
-        node.pt.draw();
-        if (palatt) {
-            StdDraw.setPenColor(StdDraw.BLUE);
-        }
-        else {
-            StdDraw.setPenColor(StdDraw.RED);
-        }
         StdDraw.setPenRadius(0.01);
-        node.rect.draw();
+        node.pt.draw();
+        // if (palatt) {
+        //     StdDraw.setPenColor(StdDraw.BLUE);
+        // }
+        // else {
+        //     StdDraw.setPenColor(StdDraw.RED);
+        // }
+        // StdDraw.setPenRadius(0.01);
+        // node.rect.draw();
         drawRecurse(node.rightOrTop, palatt);
         drawRecurse(node.leftOrBottom, !palatt);
     }
@@ -140,11 +160,25 @@ public class KdTree {
     }
 
     private void rangeRecurse(Node node, List<Point2D> points, RectHV rect) {
-        if (node == null) return;
         if (rect.contains(node.pt)) points.add(node.pt);
-        rangeRecurse(node.leftOrBottom, points, rect);
-        rangeRecurse(node.rightOrTop, points, rect);
-        // return node;
+
+        if (node.leftOrBottom != null && node.rightOrTop != null) {
+            if (rect.distanceSquaredTo(node.leftOrBottom.pt) < rect
+                    .distanceSquaredTo(node.rightOrTop.pt)) {
+                rangeRecurse(node.leftOrBottom, points, rect);
+            }
+            else if (rect.distanceSquaredTo(node.leftOrBottom.pt) > rect
+                    .distanceSquaredTo(node.rightOrTop.pt)) {
+                rangeRecurse(node.rightOrTop, points, rect);
+            }
+            else {
+                rangeRecurse(node.leftOrBottom, points, rect);
+                rangeRecurse(node.rightOrTop, points, rect);
+            }
+        }
+        else if (node.leftOrBottom != null) rangeRecurse(node.leftOrBottom, points, rect);
+        else if (node.rightOrTop != null) rangeRecurse(node.rightOrTop, points, rect);
+        else return;
     }
 
     private static class Node {
