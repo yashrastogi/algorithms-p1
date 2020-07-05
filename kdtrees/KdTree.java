@@ -4,7 +4,6 @@
  *  Description:
  **************************************************************************** */
 
-import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.RectHV;
 import edu.princeton.cs.algs4.StdDraw;
@@ -23,15 +22,24 @@ public class KdTree {
     public static void main(String[] args) {
         // initialize the two data structures with point from file
         // String filename = args[0];
-        In in = new In("inputs\\circle10.txt");
         KdTree kdtree = new KdTree();
-        while (!in.isEmpty()) {
-            double x = in.readDouble();
-            double y = in.readDouble();
-            Point2D p = new Point2D(x, y);
-            kdtree.insert(p);
-        }
+        kdtree.insert(new Point2D(0.1, 0.8));
+        kdtree.insert(new Point2D(0.8, 0.1));
         kdtree.draw();
+        PointSET brute = new PointSET();
+        brute.insert(new Point2D(0.1, 0.8));
+        brute.insert(new Point2D(0.8, 0.1));
+        kdtree.draw();
+
+        Point2D query = new Point2D(0.1, 0.7);
+        StdDraw.setPenRadius(0.02);
+        query.draw();
+        StdDraw.setPenRadius(0.04);
+        StdDraw.setPenColor(StdDraw.RED);
+        kdtree.nearest(query).draw();
+        StdDraw.setPenRadius(0.03);
+        StdDraw.setPenColor(StdDraw.BLUE);
+        brute.nearest(query).draw();
     }
 
     public void insert(Point2D val) {
@@ -87,50 +95,66 @@ public class KdTree {
     }
 
     public Point2D nearest(Point2D that) {
-        if (that == null)
-            throw new IllegalArgumentException();
-        return nearestRecurse(root, that, -1, null);
-
+        if (that == null) throw new IllegalArgumentException();
+        return nearestRecurse(root, that, null);
     }
 
-    private Point2D nearestRecurse(Node node, Point2D pt, double minDist, Point2D minPt) {
-        if (node == null) return minPt;
-        else if (node.pt.equals(pt)) {
-            return pt;
-        }
-        else if (node.leftOrBottom != null && node.rightOrTop != null) {
-            double distLeft = node.leftOrBottom.rect.distanceSquaredTo(pt);
-            double distRight = node.rightOrTop.rect.distanceSquaredTo(pt);
-            if (distLeft < distRight) {
-                if (minDist == -1 || distLeft < minDist) {
-                    minDist = distLeft;
-                    minPt = node.leftOrBottom.pt;
-                }
-                nearestRecurse(node.leftOrBottom, pt, minDist, minPt);
+    // To find a closest point to a given query point, start at the root and recursively search in both
+    // subtrees using the following pruning rule: search a node only only if it might contain a
+    // point that is closer than the best one found so far. The effectiveness of the pruning rule depends
+    // on quickly finding a nearby point. To do this, organize the recursive method so that when there are
+    // two possible subtrees to go down, you always choose the subtree that is on the same side of the
+    // splitting line as the query point as the first subtree to explore—the closest point found while
+    // exploring the first subtree may enable pruning of the second subtree.
+
+    private Point2D nearestRecurse(Node node, Point2D pt, Point2D minPt) {
+        if (node != null) {
+            if (node.pt.equals(pt)) {
+                // System.out.println('B');
+                return pt;
             }
             else {
-                if (minDist == -1 || distRight < minDist) {
-                    minDist = distRight;
-                    minPt = node.rightOrTop.pt;
+                double minDist = minPt != null ? minPt.distanceSquaredTo(pt) : 3;
+                if (pt.distanceSquaredTo(node.pt) < minDist) {
+                    minDist = node.pt.distanceSquaredTo(pt);
+                    minPt = node.pt;
                 }
-                nearestRecurse(node.rightOrTop, pt, minDist, minPt);
+                double distLeft = node.leftOrBottom != null ?
+                                  node.leftOrBottom.rect.distanceSquaredTo(pt) : 3;
+                double distRight = node.rightOrTop != null ?
+                                   node.rightOrTop.rect.distanceSquaredTo(pt) : 3;
+                // System.out.println(distLeft + " r: "+distRight);
+                if (distLeft < distRight) {
+                    // System.out.println(
+                    //         1 + " " + node.pt + " " + distLeft + " " + distRight + " " + minDist);
+                    if (distLeft < minDist) {
+                        nearestRecurse(node.leftOrBottom, pt, minPt);
+                        nearestRecurse(node.rightOrTop, pt, minPt);
+                    }
+
+                }
+                else if (distRight < distLeft) {
+                    // System.out.println(
+                    //         2 + " " + node.pt + " " + distLeft + " " + distRight + " " + minDist);
+                    if (distRight < minDist) {
+                        nearestRecurse(node.rightOrTop, pt, minPt);
+                        nearestRecurse(node.leftOrBottom, pt, minPt);
+                    }
+                }
+                else {
+                    // System.out.println(
+                    //         3 + " " + node.pt + " " + distLeft + " " + distRight + " " + minDist);
+                    if (node.rightOrTop != null && node.rightOrTop.rect.contains(pt)) {
+                        nearestRecurse(node.rightOrTop, pt, minPt);
+                        nearestRecurse(node.leftOrBottom, pt, minPt);
+                    }
+                    else {
+                        nearestRecurse(node.leftOrBottom, pt, minPt);
+                        nearestRecurse(node.rightOrTop, pt, minPt);
+                    }
+                }
             }
-        }
-        else if (node.leftOrBottom != null) {
-            double distLeft = node.leftOrBottom.rect.distanceSquaredTo(pt);
-            if (minDist == -1 || distLeft < minDist) {
-                minDist = distLeft;
-                minPt = node.leftOrBottom.pt;
-            }
-            nearestRecurse(node.leftOrBottom, pt, minDist, minPt);
-        }
-        else if (node.rightOrTop != null) {
-            double distRight = node.rightOrTop.rect.distanceSquaredTo(pt);
-            if (minDist == -1 || distRight < minDist) {
-                minDist = distRight;
-                minPt = node.rightOrTop.pt;
-            }
-            nearestRecurse(node.rightOrTop, pt, minDist, minPt);
+
         }
         return minPt;
     }
@@ -145,14 +169,14 @@ public class KdTree {
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.setPenRadius(0.01);
         node.pt.draw();
-        if (palatt) {
-            StdDraw.setPenColor(StdDraw.BLUE);
-        }
-        else {
-            StdDraw.setPenColor(StdDraw.RED);
-        }
-        StdDraw.setPenRadius(0.01);
-        node.rect.draw();
+        // if (palatt) {
+        //     StdDraw.setPenColor(StdDraw.BLUE);
+        // }
+        // else {
+        //     StdDraw.setPenColor(StdDraw.RED);
+        // }
+        // StdDraw.setPenRadius(0.01);
+        // node.rect.draw();
         drawRecurse(node.rightOrTop, palatt);
         drawRecurse(node.leftOrBottom, !palatt);
     }
@@ -192,36 +216,28 @@ public class KdTree {
     }
 
     public Iterable<Point2D> range(RectHV rect) {
-        if (rect == null)
-            throw new IllegalArgumentException();
+        if (rect == null) throw new IllegalArgumentException();
         List<Point2D> points = new ArrayList<>();
+        if (root == null) return points;
         rangeRecurse(root, points, rect);
         return points;
     }
 
     private void rangeRecurse(Node node, List<Point2D> points, RectHV rect) {
-        if (node == null) return;
+        if (rect.contains(node.pt)) points.add(node.pt);
 
-        if (rect.contains(node.pt))
-            points.add(node.pt);
+        boolean intersectsL = node.leftOrBottom != null && rect
+                .intersects(node.leftOrBottom.rect);
+        boolean intersectsR = node.rightOrTop != null && rect.intersects(node.rightOrTop.rect);
 
-        if (node.leftOrBottom != null && node.rightOrTop != null) {
-            if (rect.intersects(node.leftOrBottom.rect) && rect.intersects(node.rightOrTop.rect)) {
-                rangeRecurse(node.leftOrBottom, points, rect);
-                rangeRecurse(node.rightOrTop, points, rect);
-            }
-            else if (rect.intersects(node.leftOrBottom.rect)) {
-                rangeRecurse(node.leftOrBottom, points, rect);
-            }
-            else {
-                rangeRecurse(node.rightOrTop, points, rect);
-            }
-        }
-        else if (node.rightOrTop != null)
-            rangeRecurse(node.rightOrTop, points, rect);
-        else
+        if (intersectsL && intersectsR) {
             rangeRecurse(node.leftOrBottom, points, rect);
-
+            rangeRecurse(node.rightOrTop, points, rect);
+        }
+        else if (intersectsL)
+            rangeRecurse(node.leftOrBottom, points, rect);
+        else if (intersectsR)
+            rangeRecurse(node.rightOrTop, points, rect);
     }
 
     private static class Node {

@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="kdtrees: fix insert RectHV">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+    <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/inputs/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KdTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/KdTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NearestNeighborVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/NearestNeighborVisualizer.java" afterDir="false" />
@@ -53,7 +71,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RunManager" selected="Application.NearestNeighborVisualizer">
     <configuration name="KdTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -80,7 +98,6 @@
     <configuration name="NearestNeighborVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NearestNeighborVisualizer" />
       <module name="Algorithms, Part I" />
-      <option name="PROGRAM_PARAMETERS" value="inputs\input10K.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,11 +109,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.KdTreeVisualizer" />
+      <item itemvalue="Application.KdTree" />
+      <item itemvalue="Application.KdTreeGenerator" />
+      <item itemvalue="Application.NearestNeighborVisualizer" />
+      <item itemvalue="Application.RangeSearchVisualizer" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NearestNeighborVisualizer" />
-        <item itemvalue="Application.RangeSearchVisualizer" />
         <item itemvalue="Application.KdTree" />
+        <item itemvalue="Application.RangeSearchVisualizer" />
         <item itemvalue="Application.KdTreeGenerator" />
       </list>
     </recent_temporary>
@@ -110,6 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593375688980</updated>
+      <workItem from="1593926752260" duration="5815000" />
     </task>
     <servers />
   </component>
@@ -122,7 +147,19 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,14 +172,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="464" y="32" key="#KdTreeVisualizer/0.0.1536.824@0.0.1536.824" timestamp="1593456842430" />
+    <state x="655" y="249" key="#Notifications" timestamp="1593926793298">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="655" y="249" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1593926793298" />
     <state x="249" y="0" key="#Project_Structure" timestamp="1593375936418">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1593375936418" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593376825771">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593929897891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1593376825771" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1593929897891" />
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1593454673723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -155,42 +196,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1593886680505" />
-    <state width="1493" height="143" key="GridCell.Tab.0.bottom" timestamp="1593904521736">
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593904521736" />
-    <state width="1493" height="143" key="GridCell.Tab.0.center" timestamp="1593904521728">
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.0.center" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593904521728" />
-    <state width="1493" height="143" key="GridCell.Tab.0.left" timestamp="1593904521728">
+    <state width="1493" height="253" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.0.left" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593904521728" />
-    <state width="1493" height="143" key="GridCell.Tab.0.right" timestamp="1593904521728">
+    <state width="1493" height="253" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.0.right" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593904521728" />
-    <state width="1493" height="249" key="GridCell.Tab.1.bottom" timestamp="1593881970686">
+    <state width="1493" height="253" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.1.bottom" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="249" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593881970686" />
-    <state width="1493" height="249" key="GridCell.Tab.1.center" timestamp="1593881970686">
+    <state width="1493" height="253" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.1.center" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="249" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1593881970686" />
-    <state width="1493" height="249" key="GridCell.Tab.1.left" timestamp="1593881970686">
+    <state width="1493" height="253" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.1.left" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="249" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1593881970686" />
-    <state width="1493" height="249" key="GridCell.Tab.1.right" timestamp="1593881970686">
+    <state width="1493" height="253" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state width="1493" height="253" key="GridCell.Tab.1.right" timestamp="1593932627894">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="249" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1593881970686" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1593804311564">
+    <state width="1493" height="253" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1593932627894" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1593928604921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593804311564" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593928604921" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1593377087571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -210,6 +251,11 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/KdTree.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
